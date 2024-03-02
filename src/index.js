@@ -11,7 +11,7 @@ function App() {
 }
 
 function Pizza() {
-  const ingredients = ["cheese", "sauce", "pepperoni"];
+  const ingredients = ["cheese", "lol", "sauce", "pepperoni"];
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
