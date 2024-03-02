@@ -10,7 +10,9 @@ function App() {
   );
 }
 
-function Pizza() {}
+function Pizza() {
+  const ingredients = ["cheese", "sauce", "pepperoni"];
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
