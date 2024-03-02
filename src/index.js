@@ -49,13 +49,20 @@ const pizzaData = [
 function App() {
   return (
     <>
-      <h1>Hello React</h1>
       <Pizza />
       <Pizza />
       <Pizza />
     </>
   );
 }
+
+function Header() {
+  return <h1>OHPizza</h1>;
+}
+
+function Menu() {}
+
+function Footer() {}
 
 function Pizza() {
   return (
