@@ -5,37 +5,37 @@ import "./index.css";
 const productsData = [
   {
     name: "Iogurte com proteína",
-    price: 2,
+    price: "2 €",
     photoName: "products/iogurte.jpg",
     soldOut: false,
   },
   {
     name: "Cigarros",
-    price: 5,
+    price: "5 €",
     photoName: "products/cigarros.jpg",
     soldOut: false,
   },
   {
     name: "Litrosa",
-    price: 2,
+    price: "2 €",
     photoName: "products/cerveja.jfif",
     soldOut: false,
   },
   {
     name: "Kebab",
-    price: 7,
+    price: "7 €",
     photoName: "products/kebab.jfif",
     soldOut: false,
   },
   {
     name: "Gomas",
-    price: 2,
+    price: "2 €",
     photoName: "products/gomas.png",
     soldOut: true,
   },
   {
     name: "Lasanha vegetariana",
-    price: 3,
+    price: "3 €",
     photoName: "products/lasanhaveggie.jfif",
     soldOut: false,
   },
