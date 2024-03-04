@@ -60,7 +60,7 @@ function App() {
 function Header() {
   return (
     <header className="header">
-      <h1>Arroios 69</h1>
+      <h1>Pizzeria</h1>
     </header>
   );
 }
@@ -76,10 +76,7 @@ function Menu() {
 
       {numPizzas > 0 ? (
         <>
-          <p>
-            Se estás aqui é porque és um Amigo de Arroios. Aqui poderás
-            encontrar o Dany sem t-shirt a ouvir inúmeras versões da Blue.
-          </p>
+          <p>Welcome to our pizzeria. We have {numPizzas} different types.</p>
 
           <ul className="pizzas">
             {pizzaData.map((pizza) => (
@@ -88,7 +85,7 @@ function Menu() {
           </ul>
         </>
       ) : (
-        <p>Fomos buscar comida e bebida ao indiano. Já voltamos.</p>
+        <p>At the moment, we have no pizzas in stock.</p>
       )}
       {/* <Pizza
         name="Pizza Spinaci"
@@ -138,7 +135,7 @@ function Footer() {
       {isOpen ? (
         <Order closeHour={closeHour} />
       ) : (
-        <p>O Martim está em Alvalade. Volta a partir das {openHour}:00.</p>
+        <p>We're closed. Please comeback at {openHour}:00.</p>
       )}
     </footer>
   );
@@ -147,8 +144,8 @@ function Footer() {
 function Order({ closeHour }) {
   return (
     <div className="order">
-      <p>Estamos abertos até às {closeHour}:00.</p>
-      <button className="btn">Encomendar pelo courier</button>
+      <p>We're open until {closeHour}:00.</p>
+      <button className="btn">Order</button>
     </div>
   );
 }
@@ -158,5 +155,5 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
