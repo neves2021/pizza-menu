@@ -28,7 +28,7 @@ const productsData = [
     soldOut: false,
   },
   {
-    name: "Gomsas",
+    name: "Gomas",
     price: 2,
     photoName: "products/gomas.png",
     soldOut: true,
