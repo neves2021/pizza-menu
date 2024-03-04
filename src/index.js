@@ -2,47 +2,41 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-const pizzaData = [
+const productsData = [
   {
-    name: "Focaccia",
-    ingredients: "Bread with italian olive oil and rosemary",
-    price: 6,
-    photoName: "pizzas/focaccia.jpg",
+    name: "Iogurte com proteína",
+    price: 2,
+    photoName: "products/iogurte.jpg",
     soldOut: false,
   },
   {
-    name: "Pizza Margherita",
-    ingredients: "Tomato and mozarella",
-    price: 10,
-    photoName: "pizzas/margherita.jpg",
+    name: "Cigarros",
+    price: 5,
+    photoName: "products/cigarros.jpg",
     soldOut: false,
   },
   {
-    name: "Pizza Spinaci",
-    ingredients: "Tomato, mozarella, spinach, and ricotta cheese",
-    price: 12,
-    photoName: "pizzas/spinaci.jpg",
+    name: "Litrosa",
+    price: 2,
+    photoName: "products/cerveja.jfif",
     soldOut: false,
   },
   {
-    name: "Pizza Funghi",
-    ingredients: "Tomato, mozarella, mushrooms, and onion",
-    price: 12,
-    photoName: "pizzas/funghi.jpg",
+    name: "Kebab",
+    price: 7,
+    photoName: "products/kebab.jfif",
     soldOut: false,
   },
   {
-    name: "Pizza Salamino",
-    ingredients: "Tomato, mozarella, and pepperoni",
-    price: 15,
-    photoName: "pizzas/salamino.jpg",
+    name: "Gomsas",
+    price: 2,
+    photoName: "products/gomas.png",
     soldOut: true,
   },
   {
-    name: "Pizza Prosciutto",
-    ingredients: "Tomato, mozarella, ham, aragula, and burrata cheese",
-    price: 18,
-    photoName: "pizzas/prosciutto.jpg",
+    name: "Lasanha vegetariana",
+    price: 3,
+    photoName: "products/lasanhaveggie.jfif",
     soldOut: false,
   },
 ];
@@ -66,29 +60,29 @@ function Header() {
 }
 
 function Menu() {
-  const pizzas = pizzaData;
-  //const pizzas = [];
-  const numPizzas = pizzas.length;
+  const products = productsData;
+  //const products = [];
+  const numProducts = products.length;
 
   return (
     <main className="menu">
       <h2>Menu</h2>
 
-      {numPizzas > 0 ? (
+      {numProducts > 0 ? (
         <>
           <p>
             Se estás aqui é porque és um Amigo de Arroios. Aqui poderás
             encontrar o Dany sem t-shirt a ouvir inúmeras versões da Blue.
           </p>
 
-          <ul className="pizzas">
-            {pizzaData.map((pizza) => (
-              <Pizza pizzaObj={pizza} key={pizza.name} />
+          <ul className="products">
+            {productsData.map((product) => (
+              <Product productObj={product} key={product.name} />
             ))}
           </ul>
         </>
       ) : (
-        <p>Fomos buscar comida e bebida ao indiano. Já voltamos.</p>
+        <p>Fomos buscar mais jola ao Sefu. Já voltamos.</p>
       )}
       {/* <Pizza
         name="Pizza Spinaci"
@@ -107,16 +101,15 @@ function Menu() {
   );
 }
 
-function Pizza({ pizzaObj }) {
+function Product({ productObj }) {
   // if (pizzaObj.soldOut) return null;
 
   return (
-    <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
-      <img src={pizzaObj.photoName} alt={pizzaObj.name} />
+    <li className={`product ${productObj.soldOut ? "sold-out" : ""}`}>
+      <img src={productObj.photoName} alt={productObj.name} />
       <div>
-        <h3>{pizzaObj.name}</h3>
-        <p>{pizzaObj.ingredients}</p>
-        <span>{pizzaObj.soldOut ? "SEM STOCK" : pizzaObj.price}</span>
+        <h3>{productObj.name}</h3>
+        <span>{productObj.soldOut ? "SEM STOCK" : productObj.price}</span>
       </div>
     </li>
   );
@@ -158,5 +151,5 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
